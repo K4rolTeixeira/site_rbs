@@ -64,30 +64,7 @@
   }, { threshold: 0.4 });
   if (document.querySelector('.stat-grid')) statIO.observe(document.querySelector('.stat-grid'));
 
-  // subtle tilt on emblem following pointer — desktop with a real mouse only
-  const emblem = document.getElementById('emblem');
-  const heroSection = document.getElementById('hero');
-  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  if (canHover) {
-    heroSection.addEventListener('mousemove', (e) => {
-      const r = heroSection.getBoundingClientRect();
-      const px = (e.clientX - r.left) / r.width - 0.5;
-      const py = (e.clientY - r.top) / r.height - 0.5;
-      emblem.style.transform = `rotateY(${px * 10}deg) rotateX(${-py * 10}deg)`;
-    });
-    heroSection.addEventListener('mouseleave', () => {
-      emblem.style.transform = 'rotateY(0) rotateX(0)';
-    });
-
-    // parallax on emblem wrap with scroll (desktop layout only)
-    window.addEventListener('scroll', () => {
-      if (window.innerWidth <= 860) return;
-      const y = window.scrollY;
-      if (y < window.innerHeight) {
-        document.querySelector('.emblem-wrap').style.transform = `translateY(${y * 0.12}px)`;
-      }
-    });
-  }
+  // hero background image is static (multi-layer gradient overlay keeps it legible)
 
   // respect reduced motion
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
