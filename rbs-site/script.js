@@ -8,6 +8,25 @@
     progress.style.width = pct + '%';
   });
 
+  // mobile menu toggle
+  const burger = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  function toggleMenu() {
+    const isOpen = mobileMenu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+  if (burger) {
+    burger.addEventListener('click', toggleMenu);
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+  }
+
   // hero mask reveal on load
   window.addEventListener('load', () => {
     document.getElementById('hero').classList.add('loaded');
@@ -45,26 +64,30 @@
   }, { threshold: 0.4 });
   if (document.querySelector('.stat-grid')) statIO.observe(document.querySelector('.stat-grid'));
 
-  // subtle tilt on emblem following pointer
+  // subtle tilt on emblem following pointer — desktop with a real mouse only
   const emblem = document.getElementById('emblem');
   const heroSection = document.getElementById('hero');
-  heroSection.addEventListener('mousemove', (e) => {
-    const r = heroSection.getBoundingClientRect();
-    const px = (e.clientX - r.left) / r.width - 0.5;
-    const py = (e.clientY - r.top) / r.height - 0.5;
-    emblem.style.transform = `rotateY(${px * 14}deg) rotateX(${-py * 14}deg)`;
-  });
-  heroSection.addEventListener('mouseleave', () => {
-    emblem.style.transform = 'rotateY(0) rotateX(0)';
-  });
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (canHover) {
+    heroSection.addEventListener('mousemove', (e) => {
+      const r = heroSection.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      emblem.style.transform = `rotateY(${px * 10}deg) rotateX(${-py * 10}deg)`;
+    });
+    heroSection.addEventListener('mouseleave', () => {
+      emblem.style.transform = 'rotateY(0) rotateX(0)';
+    });
 
-  // parallax on emblem wrap with scroll
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y < window.innerHeight) {
-      document.querySelector('.emblem-wrap').style.transform = `translateY(${y * 0.12}px)`;
-    }
-  });
+    // parallax on emblem wrap with scroll (desktop layout only)
+    window.addEventListener('scroll', () => {
+      if (window.innerWidth <= 860) return;
+      const y = window.scrollY;
+      if (y < window.innerHeight) {
+        document.querySelector('.emblem-wrap').style.transform = `translateY(${y * 0.12}px)`;
+      }
+    });
+  }
 
   // respect reduced motion
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
