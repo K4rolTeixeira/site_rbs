@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RBS Consultoria Contábil</title>
+<meta name="description" content="RBS Consultoria Contábil: especialistas em reforma tributária, com atendimento completo ao MEI e às pequenas e médias empresas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,25 +22,46 @@
     <a href="#processo">Como trabalhamos</a>
     <a href="#contato">Contato</a>
   </nav>
-  <a class="nav-cta" href="https://wa.me/5524998239333?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20RBS%20Consultoria%20Cont%C3%A1bil." target="_blank" rel="noopener">
-    Fale conosco
+  <a class="nav-cta" href="https://wa.me/5524992062946?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20RBS%20Consultoria%20Cont%C3%A1bil." target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.5 11.9a8.4 8.4 0 1 1-3.6-6.9M20.5 3.5l-.9 4.3-4.3-.9"/></svg>
+    <span>Fale conosco</span>
   </a>
+  <button class="burger" id="burgerBtn" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#processo">Como trabalhamos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="btn-primary" href="https://wa.me/5524992062946?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20RBS%20Consultoria%20Cont%C3%A1bil." target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.5 11.9a8.4 8.4 0 1 1-3.6-6.9M20.5 3.5l-.9 4.3-4.3-.9"/></svg>
+    Falar no WhatsApp
+  </a>
+</div>
 
 <section class="hero" id="hero">
   <svg class="grain" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
 
   <div class="hero-grid">
     <div>
-      <div class="eyebrow-line"><span class="rule"></span> Contabilidade consultiva, não apenas obrigações</div>
+      <div class="eyebrow-line"><span class="rule"></span> Especialistas em reforma tributária</div>
       <h1 class="hero-title">
         <span class="line"><span>Estrutura sólida</span></span>
         <span class="line"><span>como a cidade.</span></span>
         <span class="line"><span>Crescimento contínuo, como a lavoura.</span></span>
       </h1>
       <p class="lead">A RBS une o rigor técnico de uma contabilidade urbana com a paciência de quem entende de safra: cuidamos dos números hoje para que o seu negócio colha resultado amanhã.</p>
+      <div class="badge-row">
+        <span class="badge"><span class="dot"></span>Especialistas em reforma tributária</span>
+        <span class="badge"><span class="dot"></span>Atendimento ao MEI</span>
+      </div>
       <div class="hero-ctas">
-        <a class="btn-primary" href="https://wa.me/5524998239333?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20RBS%20Consultoria%20Cont%C3%A1bil." target="_blank" rel="noopener">
+        <a class="btn-primary" href="https://wa.me/5524992062946?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20RBS%20Consultoria%20Cont%C3%A1bil." target="_blank" rel="noopener">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.5 11.9a8.4 8.4 0 1 1-3.6-6.9M20.5 3.5l-.9 4.3-4.3-.9"/></svg>
           Falar no WhatsApp
         </a>
@@ -48,15 +70,8 @@
     </div>
 
     <div class="emblem-wrap">
-      <div class="emblem-ring"></div>
       <div class="emblem" id="emblem">
-        <svg viewBox="0 0 200 200" fill="none">
-          <path d="M30 150 L30 100 L48 100 L48 80 L66 80 L66 150" stroke="#dfe6de" stroke-width="3" fill="none"/>
-          <path d="M66 150 C 90 100, 130 90, 150 60" stroke="#c3d179" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <path d="M150 60 C 140 55, 130 62, 132 74 C 144 76, 152 70, 150 60 Z" fill="#c3d179"/>
-          <line x1="30" y1="150" x2="170" y2="150" stroke="#93a656" stroke-width="2"/>
-          <circle cx="100" cy="100" r="80" stroke="rgba(223,230,222,.35)" stroke-width="1"/>
-        </svg>
+        <img src="assets/logo-rbs.jpg" alt="Logo RBS Consultoria Contábil" loading="eager">
       </div>
     </div>
   </div>
@@ -69,7 +84,7 @@
     <div class="kicker">Sobre a RBS</div>
     <h2>Duas raízes, um só compromisso: clareza para decidir.</h2>
     <p>Nascemos para atender quem constrói — do pequeno comércio de esquina ao produtor rural que planeja a próxima safra. Nossa marca carrega essa dualidade: o traçado firme da cidade e o verde vivo do campo.</p>
-    <p>Trabalhamos como parceiros de decisão, não apenas como quem fecha a folha e entrega a guia. Cada relatório existe para virar uma escolha melhor no seu negócio.</p>
+    <p>Trabalhamos como parceiros de decisão, não apenas como quem fecha a folha e entrega a guia. Somos especialistas em reforma tributária e fazemos atendimento completo ao MEI — cada relatório existe para virar uma escolha melhor no seu negócio.</p>
   </div>
   <div class="stat-grid">
     <div class="stat"><div class="num">10+</div><div class="lbl">empresas e produtores atendidos</div></div>
@@ -83,15 +98,15 @@
     <h2>Contabilidade completa, pensada para cada fase do negócio.</h2>
   </div>
   <div class="serv-grid">
+    <div class="serv-card featured">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <h3>Reforma tributária</h3>
+      <p>Somos especialistas em reforma tributária: analisamos o impacto no seu regime e preparamos a transição com antecedência, sem surpresas.</p>
+    </div>
     <div class="serv-card">
       <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
       <h3>Contabilidade empresarial</h3>
       <p>Escrituração, balanços e obrigações acessórias em dia, com relatórios que fazem sentido para quem decide.</p>
-    </div>
-    <div class="serv-card">
-      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      <h3>Planejamento tributário</h3>
-      <p>Escolha de regime e estratégias legais para pagar exatamente o que é devido — nem mais, nem menos.</p>
     </div>
     <div class="serv-card">
       <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 21c0-4 3-6 6-6s6 2 6 6M16 8a3 3 0 1 1 4 2.8M20 21c0-2.5-1.4-4.3-3-5.2"/></svg>
@@ -99,19 +114,19 @@
       <p>Folha, admissões, rescisões e eSocial conduzidos sem atraso e sem risco para a sua equipe.</p>
     </div>
     <div class="serv-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-8-8M12 8v4l3 2"/></svg>
+      <h3>Atendimento ao MEI</h3>
+      <p>Fazemos atendimento completo ao MEI: emissão de guias, declaração anual e orientação para crescer sem perder o enquadramento.</p>
+    </div>
+    <div class="serv-card">
       <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V9l6-5 6 5v12M10 21v-6h4v6"/></svg>
-      <h3>Abertura de empresas</h3>
-      <p>Do CNPJ ao alvará: sua empresa formalizada e pronta para operar, sem burocracia arrastada.</p>
+      <h3>Abertura e regularização</h3>
+      <p>Do CNPJ ao alvará, e também certidões e parcelamentos: sua empresa formalizada e sem pendências.</p>
     </div>
     <div class="serv-card">
       <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 15l3-4 3 3 5-7"/></svg>
       <h3>Consultoria financeira</h3>
       <p>Fluxo de caixa, indicadores e projeções para decidir com números reais, não com achismo.</p>
-    </div>
-    <div class="serv-card">
-      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7l7-4z"/></svg>
-      <h3>Regularização e legalização</h3>
-      <p>Certidões, parcelamentos e pendências resolvidas para você operar tranquilo, sem surpresas.</p>
     </div>
   </div>
 </section>
@@ -147,12 +162,15 @@
 
 <section class="contato" id="contato">
   <div class="contato-inner reveal">
-    <div class="kicker" style="color:var(--gold-400)">Vamos conversar</div>
+    <div class="kicker" style="color:var(--olive-700)">Vamos conversar</div>
     <h2>Fale com a RBS agora mesmo pelo WhatsApp.</h2>
     <p>Sem formulário, sem espera. Envie sua dúvida, conte um pouco do seu negócio e um contador da RBS responde diretamente.</p>
     <div class="contato-row">
-      <div class="phone-display">+55 24 99823-9333</div>
-      <a class="wa-btn" href="https://wa.me/5524998239333?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20RBS%20Consultoria%20Cont%C3%A1bil." target="_blank" rel="noopener">
+      <div>
+        <div class="phone-display">+55 24 99206-2946</div>
+        <a class="email-display" href="mailto:rsbcontabilidade26@gmail.com">rsbcontabilidade26@gmail.com</a>
+      </div>
+      <a class="wa-btn" href="https://wa.me/5524992062946?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20RBS%20Consultoria%20Cont%C3%A1bil." target="_blank" rel="noopener">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.5 11.9a8.4 8.4 0 1 1-3.6-6.9M20.5 3.5l-.9 4.3-4.3-.9"/></svg>
         Iniciar conversa
       </a>
@@ -161,11 +179,15 @@
 </section>
 
 <footer>
-  <div class="brand"><span class="mark" style="border-color:var(--gold-600);color:var(--gold-400)">RBS</span> Consultoria Contábil</div>
-  <div>© 2026 RBS Consultoria Contábil — todos os direitos reservados</div>
+  <div class="brand"><span class="mark" style="border-color:var(--silver-500);color:var(--forest-900)">RBS</span> Consultoria Contábil</div>
+  <div class="footer-contact">
+    <a href="mailto:rsbcontabilidade26@gmail.com">rsbcontabilidade26@gmail.com</a>
+    <span>·</span>
+    <span>© 2026 RBS Consultoria Contábil — todos os direitos reservados</span>
+  </div>
 </footer>
 
-<a class="float-wa" href="https://wa.me/5524998239333?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20RBS%20Consultoria%20Cont%C3%A1bil." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+<a class="float-wa" href="https://wa.me/5524992062946?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20RBS%20Consultoria%20Cont%C3%A1bil." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.5 11.9a8.4 8.4 0 1 1-3.6-6.9M20.5 3.5l-.9 4.3-4.3-.9"/></svg>
 </a>
 
